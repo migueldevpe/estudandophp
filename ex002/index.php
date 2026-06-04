@@ -11,5 +11,13 @@
     echo "Hoje é dia ".date("D/M");
     echo "<br>A hora atual é ".date("G:i:s T");
   ?>
+  <?
+    $nome = "Miguel";
+    $sobrenome = "Soares";
+    $idade = 1;
+    const PAIS = "Brasil";
+
+    echo "<br>Olá, $nome $sobrenome, sua idade é $idade. Você mora no " . PAIS
+  ?>
 </body>
 </html>
