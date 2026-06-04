@@ -1,0 +1,11 @@
+fieldset.formstyle {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: .25rem;
+
+  width: fit-content;
+
+  border-radius: 1rem;
+}
