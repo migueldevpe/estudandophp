@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Desafio 1</h1>
+  </header>
+  <main>
+    <section>
+      <form 
+        method="get"
+        action="res.php"
+      >
+        <fieldset style="display: flex; flex-direction: column; max-width: 50%;">
+          <legend>X</legend>
+          <div style="display: flex; flex-direction: column;">
+            <label for="num">Insira um número</label>
+            <input 
+              type="number" 
+              name="num" 
+              id="num"
+              placeholder="Insira aqui"
+              required
+            >
+          </div>
+          <button 
+            type="submit"
+            style="flex: 1;"
+          >Enviar</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

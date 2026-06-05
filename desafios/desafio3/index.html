@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 3</title>
+</head>
+<body>
+  <header>
+    <h1>Conversor de Moedas</h1>
+  </header>
+  <main>
+    <section>
+      <form method="get" action="conv.php">
+        <fieldset style="display: flex; flex-direction: column; width: fit-content;">
+          <legend>Conversão</legend>
+          <div style="display: flex; flex-direction: column;">
+            <label for="din">Informe a quantidade em R$:</label>
+            <input type="number" name="din" id="din" placeholder="Valor em reais" min="5.16" step="0.01" required>
+          </div>
+          <button type="submit">Converter</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

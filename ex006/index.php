@@ -20,6 +20,17 @@
       pow() - potência, pique o **, só que sem perder a ordem de precedência, sem precisar utilizar o parenteses para prioridade
       sqrt - retorna a raiz quadrada
     */
+
+    // $n = (int) 8;
+
+    // var_dump($n);
+
+    $r = "5" . "5";
+    $n = "5" + "5"; // no PHP, isso funciona, é como se fosse o número em tipo número, ao invés de tipo string, a forma correta de concatenar string em PHP é utilizando o (.)
+
+    echo "$r / $n <br>";
+
+    var_dump($r)
   ?>
 </body>
 </html>
