@@ -14,7 +14,7 @@
     $anoAtual = $_GET["anoAtual"] ?? 2026;
   ?>
   <main>
-    <form action="<?= $_SERVER["PHP_SELF"] ?>" method="get" style="display: flex; flex-direction: column; gap: .75rem; width: fit-content;">
+    <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="get" style="display: flex; flex-direction: column; gap: .75rem; width: fit-content;">
       <div style="display: flex; flex-direction: column;">
         <label for="anoNasc">Em que ano você nasceu?</label>
         <input type="number" name="anoNasc" id="anoNasc" value="<?= $anoNasc ?>" required>

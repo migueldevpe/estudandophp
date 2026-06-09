@@ -21,7 +21,7 @@
   ?>
   <main>
     <section>
-      <form action="<?= $_SERVER["PHP_SELF"] ?>" method="get">
+      <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="get">
         <fieldset class="[all:revert] !flex !flex-col !gap-4 !border !border-black !rounded-md !w-fit">
           <legend class="[all:revert]">Formulário de reajuste de preços</legend>
           <div class="flex flex-col">

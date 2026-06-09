@@ -15,7 +15,7 @@
 
     $resto = $saque;
 
-    $ced100 = floor($resto / 100);
+    $ced100 = floor($resto / 100); // arrendonda par ao menor número
     $resto %= 100;
 
     $ced50 = floor($resto / 50);
@@ -33,7 +33,7 @@
   <main>
     <section>
       <form 
-        action="<?= $_SERVER["PHP_SELF"] ?>" 
+        action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" 
         method="POST"
       >
         <fieldset class="[all:revert] !flex !flex-col !gap-4 !w-fit !rounded-md">

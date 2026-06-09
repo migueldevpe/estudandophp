@@ -30,7 +30,7 @@
   ?>
   <main>
     <section>
-      <form action="<?= $_SERVER["PHP_SELF"] ?>" method="get" class="w-fit">
+      <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="get" class="w-fit">
         <fieldset class="!flex !flex-col !gap-4 [all:revert] !rounded-md">
           <legend class="[all:revert]">Calculador de médias</legend>
           <div class="flex flex-col">

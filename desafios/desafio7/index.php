@@ -13,7 +13,7 @@
     $n = $_GET["n"] ?? 0;
   ?>
   <main>
-    <form action="<?= $_SERVER["PHP_SELF"] ?>" method="GET" style="display: flex; flex-direction: column; width: fit-content;">
+    <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="GET" style="display: flex; flex-direction: column; width: fit-content;">
       <div style="display: flex; flex-direction: column;">
         <label for="n">Número:</label>
         <input type="number" name="n" id="n" value="<?= $n ?>" required/>

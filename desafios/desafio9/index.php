@@ -19,7 +19,7 @@
     $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY)
   ?>
   <main>
-    <form method="get" action="<?= $_SERVER["PHP_SELF"] ?>" style="display: flex; flex-direction: column; gap: .75rem; width: fit-content;">
+    <form method="get" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" style="display: flex; flex-direction: column; gap: .75rem; width: fit-content;">
       <div style="display: flex; flex-direction: column;">
         <label for="salario">Informe o seu salário:</label>
         <input type="number" name="salario" id="salario">

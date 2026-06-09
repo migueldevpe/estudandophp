@@ -31,7 +31,7 @@
   <main>
     <section>
       <form 
-        action="<?= $_SERVER["PHP_SELF"] ?>" 
+        action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" 
         method="POST"
       >
         <fieldset class="[all:revert] !flex !flex-col !gap-4 !w-fit !rounded-md">

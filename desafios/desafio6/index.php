@@ -14,7 +14,7 @@
     $resto = $dividendo % $divisor;
   ?>
   <main>
-    <form action="<?= $_SERVER["PHP_SELF"] ?>" method="get">
+    <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="get"> <!-- O método GET faz com que as informações fiquem na tela, já o POST, é mais escondidinho. O $_SERVER["PHP_SELF"] é um array associativo que busca e pega a informação do ambiente do servidor, essa informação é o link/url da própria página. $_SERVER[] é uma superglobal usada para obter informações do servidor, e a chave "PHP_SELF", retorna o link atual da página. DICA: utilize o htmlspecialchars() para melhor segurança, pois, pode haver brechas para XSS -->
       <fieldset style="display: flex; flex-direction: column; gap: .75rem; width: fit-content; border-radius: .75rem;">
         <legend style="font-size: 1.2rem;">Anatomia de uma divisão</legend>
         <div style="display: flex; flex-direction: column">
@@ -39,7 +39,7 @@
         <?= $resto ?>
       </div>
       <div style="padding: 3rem; font-size: 2rem; text-align: center; border-left: 2px solid black; border-top: 1px solid black;">
-        <?= number_format($resultado, 3) ?>
+        <?= number_format($resultado, 3) // o número formatado com 3 casas decimais ?> 
       </div>
     </div>
   </main>

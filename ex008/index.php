@@ -14,7 +14,7 @@
     <div>
     <h1>Somador</h1>
       <form 
-        action="<?= $_SERVER["PHP_SELF"] ?>"
+        action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>"
         method="get"
         style="display: flex; flex-direction: column; gap: 1rem; width: fit-content;"
       >
