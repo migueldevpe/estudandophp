@@ -1,35 +1,28 @@
 <?php
-  class Caneta {
-    var $modelo;
+  class Caneta { // criação da classe
+    var $modelo; // definindo os atributos da classe (variável e nome da variável)
     var $cor;
     var $ponta;
     var $carga;
     var $tampada;
 
-    function rabiscar() { 
-      if ($this->tampada === true) {
-        echo "<p>Sua caneta está tampada.</p>";
-      } else if ($this->carga < 20) {
-        echo "<p>Sua caneta tem a possibilidade de falhar.</p>";
+    function rabiscar() { // criando os métodos da classe (que nem uma função, tem parâmetros, bloco de código, etc.)
+      if ($this->tampada === true) { // para se referir aos atributos criados, sempre utiliza-se o $this->, é praticamente dizendo: ISSO DA CLASSE
+        echo "Primeiro, destampe a sua caneta, ela está tampada.";
+      } else if ($this->carga <= 20 && $this->tampada === false) {
+        echo "Sua caneta pode falhar, rabiscando...";
       } else {
-        echo "<p>Rabiscando...</p>";
+        echo "Rabiscando...";
       }
     }
-    function destampar() { 
+
+    function destampar() {
       if ($this->tampada === true) {
-        echo "<p>Destampado.</p>"; 
+        echo "Primeiro, destampe a sua caneta.";
       } else {
-        echo "<p>Sua caneta está destampada.";
-      }
-    }
-    function tampar() {
-      if ($this->tampada === false) {
-        echo "<p>Tampado.</p>"; 
-      } else {
-        echo "<p>Sua caneta está tampada.</p>"; 
-      }
+        echo "Destampado.";
+      } 
     }
   }
 
-  // ÚLTIMA AULA - CURSO POO PHP #02b - MINUTO: 15:15
 ?>
