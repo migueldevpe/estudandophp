@@ -8,20 +8,28 @@
 
     function rabiscar() { // criando os métodos da classe (que nem uma função, tem parâmetros, bloco de código, etc.)
       if ($this->tampada === true) { // para se referir aos atributos criados, sempre utiliza-se o $this->, é praticamente dizendo: ISSO DA CLASSE
-        echo "Primeiro, destampe a sua caneta, ela está tampada.";
+        echo "\n<p>Primeiro, destampe a sua caneta, ela está tampada.</p>";
       } else if ($this->carga <= 20 && $this->tampada === false) {
-        echo "Sua caneta pode falhar, rabiscando...";
+        echo "\n<p>Sua caneta pode falhar, rabiscando..</p>.";
       } else {
-        echo "Rabiscando...";
+        echo "\nRabiscando...";
       }
     }
 
     function destampar() {
       if ($this->tampada === true) {
-        echo "Primeiro, destampe a sua caneta.";
+        echo "\n<p>Primeiro, destampe a sua caneta.</p>";
       } else {
-        echo "Destampado.";
+        echo "\n<p>Destampado.</p>";
       } 
+    }
+
+    function tampar() {
+      if ($this->tampada === true) {
+        echo "\n<p>Já está tampada. Destampe.</p>";
+      } else {
+        echo "\n<p>Tampado.</p>";
+      }
     }
   }
 
