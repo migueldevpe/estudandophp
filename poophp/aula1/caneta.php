@@ -12,15 +12,16 @@
       } else if ($this->carga <= 20 && $this->tampada === false) {
         echo "\n<p>Sua caneta pode falhar, rabiscando..</p>.";
       } else {
-        echo "\nRabiscando...";
+        echo "\n<p>Rabiscando...</p>";
       }
     }
 
     function destampar() {
-      if ($this->tampada === true) {
-        echo "\n<p>Primeiro, destampe a sua caneta.</p>";
+      if ($this->tampada === false) {
+        echo "\n<p>Sua caneta já está destampada.</p>";
       } else {
         echo "\n<p>Destampado.</p>";
+        $this->tampada = false;
       } 
     }
 
@@ -29,6 +30,7 @@
         echo "\n<p>Já está tampada. Destampe.</p>";
       } else {
         echo "\n<p>Tampado.</p>";
+        $this->tampada = true;
       }
     }
   }
