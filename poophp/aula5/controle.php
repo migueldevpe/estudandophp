@@ -40,7 +40,7 @@
     public function abrirMenu() {
       $barras = "";
 
-      for ($i = 0; $i < $this->getVolume(); $i = $i + 10) {
+      for ($i = 0; $i < $this->getVolume(); $i += 10) {
         $barras .= "
           <strong style=\"display: flex; flex-direction: column; align-items: center;\">
             <span style=\"font-size: 1.5rem;\">|</span>
