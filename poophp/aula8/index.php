@@ -6,26 +6,34 @@
   <title>Herança de diferença/implementação</title>
 </head>
 <body>
+  <!-- Foi utilizado o extends, public "final" function, abstract class, class final, implements, etc... -->
   <?php 
     require_once("aluno.php");
     require_once("bolsista.php");
     require_once("visitante.php");
 
-    $aluno = new Aluno("Jorge", 18, "Masculino", 0, "TI");
+    $visitante = new Visitante("Ciclano", 22, "Masculino");
 
-    $bolsista = new Bolsista("João", 18, "Masculino", 0, "TI", 1);
+    $aluno = array();
 
-    echo "<pre>";
+    $aluno[0] = new Aluno("Fulano", 18, "Masculino", 1, "TI");
+
+    $aluno[0]->pagarMensalidade();
+
+    $bolsista = new Bolsista("Fulana", 19, "Feminino", 2, "Enfermagem", 50);
 
     $bolsista->pagarMensalidade();
 
-    $aluno->pagarMensalidade();
+    echo "<pre>";
 
+    var_dump($aluno[0]);
+    echo "<br/>";
+    var_dump($visitante);
+    echo "<br/>";
     var_dump($bolsista);
 
-    var_dump($aluno);
-
     echo "</pre>";
+
   ?>
 </body>
 </html>

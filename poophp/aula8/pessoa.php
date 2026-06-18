@@ -1,24 +1,24 @@
-<? 
+<?
   abstract class Pessoa {
-    private string $nome;
-    private int $idade;
-    private string $sexo;
+    protected string $nome;
+    protected int $idade;
+    protected string $sexo;
 
-    public function __construct(string $nome, int $idade, string $sexo) {
+    public function __construct(string $nome = "", int $idade = 18, string $sexo = "Masculino") {
       $this->setNome($nome);
       $this->setIdade($idade);
       $this->setSexo($sexo);
     }
 
-    public function getNome() {
+    public function getNome(): string {
       return $this->nome;
     }
 
-    public function setNome(string $nome) {
+    public function setNome(string $nome): void {
       $this->nome = $nome;
     }
 
-    public function getIdade() {
+    public function getIdade(): int {
       return $this->idade;
     }
 
@@ -26,7 +26,7 @@
       $this->idade = $idade;
     }
 
-    public function getSexo() {
+    public function getSexo(): string {
       return $this->sexo;
     }
 
@@ -34,8 +34,8 @@
       $this->sexo = $sexo;
     }
 
-    public function fazerAniv() {
-
+    public final function fazerAniv(): void {
+      $this->setIdade($this->getIdade() + 1);
     }
   }
 ?>

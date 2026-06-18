@@ -5,12 +5,8 @@
     private int $bolsa;
 
     #[Override]
-    public function __construct(string $nome, int $idade, string $sexo, int $matricula, string $curso, int $bolsa) {
-      $this->setNome($nome);
-      $this->setIdade($idade);
-      $this->setSexo($sexo);
-      $this->setMatricula($matricula);
-      $this->setCurso($curso);
+    public function __construct(string $nome, int $idade, string $sexo, int $matricula = 0, string $curso = "", int $bolsa) {
+      parent::__construct($nome, $idade, $sexo, $matricula, $curso);
       $this->setBolsa($bolsa);
     }
 
@@ -18,18 +14,17 @@
       return $this->bolsa;
     }
 
-    public function setBolsa(int $bolsa) {
+    public function setBolsa(int $bolsa): void {
       $this->bolsa = $bolsa;
     }
 
-    public function renovarBolsa() {
-
+    public function renovarBolsa(): void {
+      echo "<p>Bolsa renovada.</p>";
     }
 
     #[Override]
     public function pagarMensalidade(): void {
-      $this->setMatricula($this->getMatricula() + 1);
-      echo "<p>Mensalidade paga com desconto da bolsa no valor de R$ 770,00.</p>";
+      echo "<p>A matrícula de <strong>{$this->getNome()}</strong> foi paga com desconto na mensalidade. <strong>(Bolsista)</strong></p>";
     }
   }
 ?>
